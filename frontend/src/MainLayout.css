@@ -1,0 +1,327 @@
+/* Reset & Background */
+.app-container {
+  min-height: 100vh;
+  background-color: #050510;
+  color: white;
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 32px;
+  background-color: #150b2e;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-box {
+  background: linear-gradient(135deg, #4f46e5, #9333ea, #db2777);
+  padding: 8px;
+  border-radius: 12px;
+  display: flex;
+}
+
+.brand-title {
+  font-size: 1.25rem;
+  font-weight: 900;
+  font-style: italic;
+  margin: 0;
+}
+
+.brand-subtitle {
+  font-size: 10px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Navbar Right */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.notif-icon { position: relative; color: #94a3b8; cursor: pointer; transition: color 0.2s; }
+.notif-icon:hover { color: white; }
+.notif-dot {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  background-color: #ff3b3b;
+  border-radius: 50%;
+  border: 2px solid #150b2e;
+}
+
+.settings-icon {
+  cursor: pointer;
+  color: #94a3b8;
+  transition: color 0.2s;
+}
+
+.settings-icon:hover {
+  color: white;
+}
+
+.premium-badge {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 6px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.plan-text { display: block; font-size: 12px; font-weight: 700; }
+.team-text { display: block; font-size: 9px; color: #6366f1; font-weight: 800; }
+
+/* Tabs Navigation */
+.tabs-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+}
+
+.tabs-container {
+  display: flex;
+  gap: 4px;
+  background-color: #0f0f2d;
+  padding: 6px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.tab-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 22px;
+  background: transparent;
+  border: none;
+  border-radius: 14px;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tab-button.active {
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.content-area {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 32px 40px;
+}
+
+/* Shared Footer Styles */
+.dashboard-footer {
+  margin-top: 40px;
+  padding: 60px 32px 40px;
+  background: linear-gradient(135deg, #0a0518 0%, #150b2e 100%);
+  color: #d1d5db;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1 1 220px;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.footer-section p,
+.footer-section small,
+.footer-section li {
+  font-size: 13px;
+  color: #94a3b8;
+  list-style: none;
+  margin-bottom: 4px;
+}
+
+.footer-section ul {
+  padding: 0;
+  margin: 0;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 12px 24px;
+  }
+
+  .brand-subtitle {
+    display: none;
+  }
+
+  .content-area {
+    padding: 0 24px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px 16px;
+  }
+
+  .navbar-left {
+    gap: 10px;
+  }
+
+  .navbar-right {
+    gap: 12px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .premium-badge {
+    padding: 4px 12px;
+    font-size: 10px;
+  }
+
+  .plan-text {
+    font-size: 10px;
+  }
+
+  .team-text {
+    font-size: 8px;
+  }
+
+  .tabs-wrapper {
+    padding: 16px 0;
+  }
+
+  .tabs-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px;
+  }
+
+  .tab-button {
+    padding: 8px 14px;
+    font-size: 12px;
+    gap: 4px;
+  }
+
+  .tab-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .content-area {
+    padding: 0 16px 40px;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .footer-section {
+    flex: 1 1 100%;
+  }
+
+  .dashboard-footer {
+    padding: 40px 16px 30px;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 12px;
+  }
+
+  .logo-box {
+    padding: 6px;
+  }
+
+  .brand-title {
+    font-size: 16px;
+  }
+
+  .notif-icon,
+  .settings-icon {
+    font-size: 18px;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .tab-button {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  .tab-label {
+    display: none;
+  }
+
+  .content-area {
+    padding: 0 12px 30px;
+  }
+
+  .footer-section h4 {
+    font-size: 14px;
+  }
+
+  .footer-section p,
+  .footer-section li {
+    font-size: 11px;
+  }
+
+  .dashboard-footer {
+    padding: 30px 12px 20px;
+  }
+}
+
+/* Animation for smooth transitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.navbar,
+.tabs-wrapper,
+.content-area {
+  animation: fadeIn 0.3s ease-in;
+}
+
